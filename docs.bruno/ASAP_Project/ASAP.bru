@@ -5,7 +5,17 @@ meta {
 }
 
 get {
-  url: https://trounle-engines.onrender.com/ping
-  body: none
+  url: http://localhost:1926/user
+  body: json
   auth: none
+}
+
+body:json {
+  {
+    "User_Name": "Matt86",
+    "Country": "India",
+    "Email": "matt@email.com",
+    "Name": "Matthew Rodriguez",
+    "Password": "M@tt#_1986"
+  }
 }
