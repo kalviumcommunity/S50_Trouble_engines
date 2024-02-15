@@ -2,13 +2,15 @@ const mongoose = require('mongoose')
 
 
 const postSchema = new mongoose.Schema({
-    "User_Name" : String,
-    "Car_Name" : String,
-    "Car_Image" : String,
-    "Company" : String,
-    "Engine Issue" : String,
-    "Engine Type" : String,
-    "Likes" : String
-})
+    userName: { type: String, required: true },
+    carName: { type: String, required: true },
+    carImage: { type: String },
+    company: { type: String },
+    engineIssue: { type: String },
+    engineType: { type: String },
+    likes: { type: Number, default: 0 }
+});
 
-module.exports = postSchema;
+const post = mongoose.model('Post', postSchema)
+
+module.exports = post;

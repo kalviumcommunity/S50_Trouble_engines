@@ -5,6 +5,7 @@ require("dotenv").config()
 const connectDB = require("./config/dbConnect.js")
 const port = process.env.PORT;
 const userRouter = require("./routes/home.js")
+const postRouter = require("./routes/post.js")
 
 
 
@@ -14,6 +15,8 @@ app.use(express.json())
 
 // app.use("/", pingRouter)
 app.use("/", userRouter)
+app.use("/", postRouter)
+
 
 const port = 3000
 
