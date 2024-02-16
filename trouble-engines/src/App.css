@@ -1,0 +1,36 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container{
+    background-color: grey;
+    width: fit-content;
+    text-align: center;
+    width: 50%;
+    color: aliceblue;
+    padding: 30px;
+    margin-left: 25%;
+    margin-top: 5%;
+    border-radius: 10px;
+}
+
+.description{
+    padding: 20px;
+}
+
+.features {
+    text-align: left;
+    padding: 20px;
+}
+
+.features h2,strong{
+    text-decoration: underline;
+    padding: 10px;
+}
+
+.features p{
+    margin-top: 5%;
+}
+

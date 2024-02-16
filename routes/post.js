@@ -13,7 +13,7 @@ router.get('/post', async (req, res) => {
     }
 });
 
-// GET request by ID
+
 router.get('/post/:id', async (req, res) => {
     const id = req.params.id;
     try {
@@ -67,7 +67,7 @@ router.put('/post/:id', [
     }
 });
 
-// DELETE all posts
+// DELETE 
 router.delete('/post', async (req, res) => {
     try {
         await post.deleteMany();
@@ -77,7 +77,7 @@ router.delete('/post', async (req, res) => {
     }
 });
 
-// DELETE request by ID
+
 router.delete('/post/:id', async (req, res) => {
     const id = req.params.id;
     try {
