@@ -1,36 +1,91 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap');
+
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
-.container{
-    background-color: grey;
-    width: fit-content;
+body {
+    background-image: url('./assets/back.png');
+    background-color: black;
+    background-size: cover;
     text-align: center;
-    width: 50%;
-    color: aliceblue;
-    padding: 30px;
-    margin-left: 25%;
-    margin-top: 5%;
-    border-radius: 10px;
+    color: white;
 }
 
-.description{
-    padding: 20px;
-}
 
-.features {
-    text-align: left;
-    padding: 20px;
-}
-
-.features h2,strong{
-    text-decoration: underline;
+/* HEADER PART */
+header h1 {
+    margin-top: 3%;
+    font-size: 50px;
+    font-weight: bolder;
     padding: 10px;
+    font-family: "Protest Strike", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    position: relative;
+    animation: slide 1s forwards;
 }
 
-.features p{
-    margin-top: 5%;
+header p {
+    font-size: 20px;
+    position: relative;
+    animation: slideright 2s forwards;
 }
 
+.btn {
+    margin: 2%;
+    width: 130px;
+    padding: 5px;
+    border: 3px solid white;
+    border-radius: 10px;
+    color: black;
+    background-color: rgba(240, 248, 255, 0.589);
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    position: relative;
+    animation: slide 3s forwards;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+    border: 3px solid black;
+    transform: scale(1.03);
+
+}
+
+.btn:active {
+    transform: scale(1.1);
+}
+
+footer p {
+    font-size: 20px;
+    animation: slide 5s forwards;
+}
+
+@keyframes slide {
+    0% {
+        left: -100%;
+        opacity: 0;
+    }
+
+    100% {
+        left: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes slideright {
+    0% {
+        right: -100%;
+        opacity: 0;
+    }
+
+    100% {
+        right: 0;
+        opacity: 1;
+    }
+}
