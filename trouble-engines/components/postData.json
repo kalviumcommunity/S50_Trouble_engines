@@ -1,0 +1,102 @@
+[
+    {
+        "_id": "65d341c4f9b195ce46111f5d",
+        "userName": "Sammy26",
+        "carName": "Yaris",
+        "carImage": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Toyota/Yaris/7283/1579858168291/front-left-side-47.jpg",
+        "company": "Toyota",
+        "engineIssue": "Piston slap, Oil Consumption",
+        "engineType": "1.5L Inline-4",
+        "likes": 2
+    },
+    {
+        "_id": "65d341f1f9b195ce46111f5e",
+        "userName": "Mustu1221",
+        "carName": "Focus",
+        "carImage": "https://stimg.cardekho.com/car-images/carexteriorimages/large/Ford/Ford-Focus/front-left-side-047.jpg",
+        "company": "Ford",
+        "engineIssue": "Transmission Failure, Head Gasket Issues",
+        "engineType": "2.0L Inline-4",
+        "likes": 5
+    },
+    {
+        "_id": "65d3420af9b195ce46111f5f",
+        "userName": "Sarah123",
+        "carName": "Cruze",
+        "carImage": "https://stimg.cardekho.com/car-images/carexteriorimages/930x620/Chevrolet/Chevrolet-Cruze/front-left-side-047.jpg",
+        "company": "Ford",
+        "engineIssue": "Coolant Leaks, Turbo Failure",
+        "engineType": "1.4L Turbocharged Inline-4",
+        "likes": 9
+    },
+    {
+        "_id": "65d34218f9b195ce46111f60",
+        "userName": "Michael456",
+        "carName": "Passat",
+        "carImage": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Volkswagen/Volkswagen-Passat/6077/1556021445602/front-left-side-47.jpg",
+        "company": "Volkswagen",
+        "engineIssue": "Timing Chain Problems, Oil Leaks",
+        "engineType": "1.8L Turbocharged Inline-4",
+        "likes": 12
+    },
+    {
+        "_id": "65d34225f9b195ce46111f61",
+        "userName": "Emily789",
+        "carName": "3 Series",
+        "carImage": "https://stimg.cardekho.com/images/carexteriorimages/930x620/BMW/3-Series/10574/1689667781970/front-left-side-47.jpg",
+        "company": "BMW",
+        "engineIssue": "High Oil Consumption, Timing Chain Issues",
+        "engineType": "2.0L Turbocharged Inline-4",
+        "likes": 2
+    },
+    {
+        "_id": "65d3423df9b195ce46111f62",
+        "userName": "Jessica_85",
+        "carName": "Camry",
+        "carImage": "https://stimg.cardekho.com/images/carexteriorimages/930x620/Toyota/Camry/10926/1690544712715/front-left-side-47.jpg",
+        "company": "Toyota",
+        "engineIssue": "Oil Consumption, Valve Issues",
+        "engineType": "2.5L Inline-4",
+        "likes": 15
+    },
+    {
+        "_id": "65d3424bf9b195ce46111f63",
+        "userName": "Amanda99",
+        "carName": "Fiesta",
+        "carImage": "https://stimg2.cardekho.com/images/roadTestimages/userimages/238/Ford.jpg?tr=w-360?tr=w-320",
+        "company": "Ford",
+        "engineIssue": "Fuel Pump Failure, Transmission Issues",
+        "engineType": "1.6L Inline-4",
+        "likes": 20
+    },
+    {
+        "_id": "65d34259f9b195ce46111f64",
+        "userName": "Chris22",
+        "carName": "Accord",
+        "carImage": "https://stimg.cardekho.com/images/car-images/large/Honda/Honda-New-Accord/5494/Steel-Metallic_323641.jpg?impolicy=resize&imwidth=420",
+        "company": "Honda",
+        "engineIssue": "VTEC Solenoid Failure, Oil Leaks",
+        "engineType": "2.4L Inline-4",
+        "likes": 10
+    },
+    {
+        "_id": "65d34266f9b195ce46111f65",
+        "userName": "Rachel00",
+        "carName": "Civic",
+        "carImage": "https://stimg2.cardekho.com/images/carNewsimages/userimages/650X420/23329/1551891827425/GeneralNews.jpg",
+        "company": "Honda",
+        "engineIssue": "Head Gasket Failure, Overheating",
+        "engineType": "1.5L Turbocharged Inline-4",
+        "likes": 10
+    },
+    {
+        "_id": "65d34273f9b195ce46111f66",
+        "userName": "Matt86",
+        "carName": "Corolla",
+        "carImage": "https://stimg.cardekho.com/images/car-images/large/Toyota/Toyota-Corolla-Altis/5673/Grey-Metallic_53585c.jpg?impolicy=resize&imwidth=420",
+        "company": "Toyota",
+        "engineIssue": "Timing Chain Tensioner Failure, Oil Consumption",
+        "engineType": "1.8L Inline-4",
+        "likes": 11
+    }
+]
