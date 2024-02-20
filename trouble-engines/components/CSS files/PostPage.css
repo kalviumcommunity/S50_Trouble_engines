@@ -1,0 +1,113 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.postPage {
+    background-image: none;
+}
+
+.postPage header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(248, 47, 47);
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.postPage header h1{
+    font-size: 35px;
+    /* border: 1px solid black; */
+    width: 300px;
+    margin-left: 30%;
+    cursor: pointer;
+}
+
+.buttns{
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-right: 5%;
+}
+
+.buttns button{
+    background-color: #0051ff;
+    border-radius: 50px;
+    width: 80px;
+    height: 40px;
+}
+
+.buttns button:hover{
+    background-color: white;
+    color: red;
+}
+
+
+.posts{
+    width: 1000px;
+    height: 250px;
+    background-color: lightgray;
+    border: 1px solid lightsteelblue;
+    border-radius: 15px;
+    margin-top: 2%;
+    margin-left: 17%;
+    margin-bottom: 2%;
+}
+
+.main-container{
+    display: flex;
+    /* border: 1px solid red; */
+    align-content: center;
+    justify-content:space-evenly;
+    padding: 10px;
+    height: 200px;
+    margin-top: 2%;
+}
+
+.posts button{
+    background-color: rgb(248, 47, 47);
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    width: 100px;
+    height: 40px;
+    position: relative;
+    left: 880px;
+    top: -25px;
+    border-radius: 10px;
+}
+
+.posts button:hover{
+    background-color: white;
+    color: red;
+    border: 3px solid red;
+}
+
+.image{
+    width: 280px;
+    border-radius: 10px;
+    margin-left: 10%;
+    position: absolute;
+    left: 15%;
+    cursor: pointer;
+}
+
+.user{
+    display: flex;
+    justify-content: center;
+}
+
+.texts{
+    width: 450px;
+    /* border: 1px solid red; */
+    font-size: larger;
+    margin-left: 30%;
+}
+
+.texts span{
+    font-weight: bold;
+}
