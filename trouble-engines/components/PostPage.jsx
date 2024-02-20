@@ -6,12 +6,16 @@ import axios from 'axios';
 function PostPage() {
     const [posts, setPosts] = useState([]);
 
+    
     useEffect(() => {
         axios.get('http://localhost:1926/post')
             .then(res => setPosts(res.data))
-            .catch(err => console.log(err));
+            .catch(err => {
+                console.error('Error fetching posts:', err);
+            });
     }, []);
 
+    
     return (
         <div className='postPage'>
             <header>
