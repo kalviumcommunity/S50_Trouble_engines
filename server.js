@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+
 require("dotenv").config()
 const connectDB = require("./config/dbConnect.js")
 const port = process.env.PORT;
@@ -15,6 +16,13 @@ app.use(express.json())
 // app.use("/", pingRouter)
 app.use("/", userRouter)
 app.use("/", postRouter)
+
+
+const port = 3000
+
+app.get('/ping', (req, res) => {
+  res.send('pong')
+})
 
 
 app.listen(port, () => {
