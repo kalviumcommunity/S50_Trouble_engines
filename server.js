@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-
+const cors = require('cors')
 require("dotenv").config()
 const connectDB = require("./config/dbConnect.js")
 const port = process.env.PORT;
@@ -13,12 +13,9 @@ connectDB();
 
 app.use(express.json())
 
-// app.use("/", pingRouter)
+app.use(cors())
 app.use("/", userRouter)
 app.use("/", postRouter)
-
-
-const port = 3000
 
 app.get('/ping', (req, res) => {
   res.send('pong')
