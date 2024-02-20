@@ -28,7 +28,10 @@ function PostPage() {
                     <button>Profile</button>
                 </div>
             </header>
+
             {posts && posts.map((data, index) => (
+
+            { postData && postdata.map((data, index) => (
                 <div key={index}>
                     <div className='posts'>
                         <div className='main-container'>
