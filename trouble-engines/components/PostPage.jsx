@@ -1,16 +1,9 @@
-import React, { useState, useEffect } from 'react';
 import './CSS files/PostPage.css';
 import postData from './postData.json'
 import { Link } from 'react-router-dom';
 
 
 function PostPage() {
-    const [postdata, setPostData] = useState([]);
-
-    useEffect(() => {
-        setPostData(postData)
-    }, []);
-    console.log(setPostData)
 
     return (
         <div className='postPage'>
@@ -24,7 +17,7 @@ function PostPage() {
                     <button>Profile</button>
                 </div>
             </header>
-            {postdata.map((data, index) => (
+            { postData && postdata.map((data, index) => (
                 <div key={index}>
                     <div className='posts'>
                         <div className='main-container'>
