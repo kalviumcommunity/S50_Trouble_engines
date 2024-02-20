@@ -1,10 +1,21 @@
 import './CSS files/PostPage.css';
-import postData from './postData.json'
 import { Link } from 'react-router-dom';
-
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 function PostPage() {
+    const [posts, setPosts] = useState([]);
 
+    
+    useEffect(() => {
+        axios.get('http://localhost:1926/post')
+            .then(res => setPosts(res.data))
+            .catch(err => {
+                console.error('Error fetching posts:', err);
+            });
+    }, []);
+
+    
     return (
         <div className='postPage'>
             <header>
@@ -17,6 +28,9 @@ function PostPage() {
                     <button>Profile</button>
                 </div>
             </header>
+
+            {posts && posts.map((data, index) => (
+
             { postData && postdata.map((data, index) => (
                 <div key={index}>
                     <div className='posts'>
