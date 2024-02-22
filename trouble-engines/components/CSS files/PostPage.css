@@ -1,4 +1,3 @@
-
 * {
     margin: 0px;
     padding: 0px;
@@ -18,7 +17,7 @@
     font-weight: bold;
 }
 
-.postPage header h1{
+.postPage header h1 {
     font-size: 35px;
     /* border: 1px solid black; */
     width: 300px;
@@ -26,7 +25,7 @@
     cursor: pointer;
 }
 
-.buttns{
+.buttns {
     width: 300px;
     display: flex;
     justify-content: space-evenly;
@@ -34,41 +33,41 @@
     margin-right: 5%;
 }
 
-.buttns button{
+.buttns button {
     background-color: #0051ff;
     border-radius: 50px;
     width: 80px;
     height: 40px;
 }
 
-.buttns button:hover{
+.buttns button:hover {
     background-color: white;
     color: red;
 }
 
 
-.posts{
+.posts {
     width: 1000px;
     height: 250px;
     background-color: lightgray;
     border: 1px solid lightsteelblue;
     border-radius: 15px;
-    margin-top: 2%;
+    margin-top: 5%;
     margin-left: 17%;
     margin-bottom: 2%;
 }
 
-.main-container{
+.main-container {
     display: flex;
     /* border: 1px solid red; */
     align-content: center;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     padding: 10px;
     height: 200px;
     margin-top: 2%;
 }
 
-.posts button{
+.posts button {
     background-color: rgb(248, 47, 47);
     color: white;
     font-size: 18px;
@@ -81,13 +80,13 @@
     border-radius: 10px;
 }
 
-.posts button:hover{
+.posts button:hover {
     background-color: white;
     color: red;
     border: 3px solid red;
 }
 
-.image{
+.image {
     width: 280px;
     border-radius: 10px;
     margin-left: 10%;
@@ -96,18 +95,105 @@
     cursor: pointer;
 }
 
-.user{
+.user {
     display: flex;
     justify-content: center;
 }
 
-.texts{
+.texts {
     width: 450px;
     /* border: 1px solid red; */
     font-size: larger;
     margin-left: 30%;
 }
 
-.texts span{
+.texts span {
     font-weight: bold;
+}
+
+.new-post {
+    background-color: rgb(248, 47, 47);
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    left: 1150px;
+    top: 12%;
+    border-radius: 10px;
+}
+
+.new-post:hover {
+    background-color: white;
+    color: red;
+    border: 3px solid red;
+}
+
+
+/* STYLING THE NEW POST PAGE  */
+
+form {
+    border: 2px solid red;
+    background-color: red;
+    color: white;
+    border-radius: 20px;
+    position: absolute;
+    left: 35%;
+    top: 8%;
+    width: 450px;
+}
+
+form h1 {
+    font-weight: bold;
+    font-size: 25px;
+    padding: 10px;
+    text-align: center;
+}
+
+form input {
+    border: 2px solid lightgrey;
+    height: 40px;
+    padding: 10px;
+    margin-top: 4px;
+    color: black;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    padding: 13px;
+    font-weight: 600;
+}
+
+.submit {
+    background-color: blue;
+    padding: 8px;
+    width: 110px;
+    border-radius: 10px;
+    margin-left: 70%;
+    margin-bottom: 4%;
+    font-weight: 600;
+}
+
+.submit:hover {
+    background-color: white;
+    color: red;
+    font-weight: 700;
+}
+
+.back {
+    background-color: blue;
+    width: 100px;
+    height: 41px;
+    border-radius: 10px;
+    position: absolute;
+    left: 6%;
+    font-weight: 600;
+}
+
+.back:hover {
+    background-color: white;
+    color: red;
+    font-weight: 700;
 }

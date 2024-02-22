@@ -6,7 +6,7 @@ import axios from 'axios';
 function PostPage() {
     const [posts, setPosts] = useState([]);
 
-    
+
     useEffect(() => {
         axios.get('http://localhost:1926/post')
             .then(res => setPosts(res.data))
@@ -15,7 +15,7 @@ function PostPage() {
             });
     }, []);
 
-    
+
     return (
         <div className='postPage'>
             <header>
@@ -28,29 +28,33 @@ function PostPage() {
                     <button>Profile</button>
                 </div>
             </header>
-
-            {posts && posts.map((data, index) => (
-
-            { postData && postdata.map((data, index) => (
-                <div key={index}>
-                    <div className='posts'>
-                        <div className='main-container'>
+            <div>
+                <Link to={'/createPost'}>
+                    <button className='new-post'>New Post</button>
+                </Link>
+            </div>
+            <div className='fullPost'>
+                {posts && posts.map((data, index) => (
+                    <div key={index}>
+                        <div className='posts'>
+                            <div className='main-container'>
+                                <div>
+                                    <img src={data.carImage} alt="Image of the car" className='image' />
+                                </div>
+                                <div className='texts'>
+                                    <h1><span>Engine Type:</span> {data.engineType}</h1>
+                                    <h6><span>Car Name:</span> {data.carName}</h6>
+                                    <p><span>Engine Issue:</span> {data.engineIssue}</p>
+                                    <p><span>Company:</span> {data.company}</p>
+                                </div>
+                            </div>
                             <div>
-                                <img src={data.carImage} alt="Image of the car" className='image' />
+                                <button>{data.likes} Likes ♡</button>
                             </div>
-                            <div className='texts'>
-                                <h1><span>Engine Type:</span> {data.engineType}</h1>
-                                <h6><span>Car Name:</span> {data.carName}</h6>
-                                <p><span>Engine Issue:</span> {data.engineIssue}</p>
-                                <p><span>Company:</span> {data.company}</p>
-                            </div>
-                        </div>
-                        <div>
-                            <button>{data.likes} Likes ♡</button>
                         </div>
                     </div>
-                </div>
-            ))}
+                ))}
+            </div>
         </div>
     );
 }

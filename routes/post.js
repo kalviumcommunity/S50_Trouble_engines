@@ -57,7 +57,6 @@ router.put('/post/:id', [
     if (!errors.isEmpty()) {
         return res.status(400).json({ errors: errors.array() });
     }
-
     const id = req.params.id;
     try {
         const data = await post.findByIdAndUpdate(id, req.body, { new: true });

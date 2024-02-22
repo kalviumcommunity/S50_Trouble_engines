@@ -11,6 +11,7 @@ function Home() {
             </header>
             <Link to={'/post'}>
                 <button className='btn'>Get Started  →</button>
+                <button className='btn'>Test Page</button>
             </Link>
 
             <footer>
