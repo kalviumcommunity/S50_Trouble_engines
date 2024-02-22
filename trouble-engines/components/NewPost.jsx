@@ -26,8 +26,12 @@ function NewPost() {
                 console.log(res);
                 navigate('/post');
             })
-            .catch(err => console.log(err));
+            .catch(err => {
+                console.log(err);
+                alert("Sorry, there was an error while submitting your post. Please try again later.");
+            });
     };
+    
 
     return (
         <form onSubmit={handleSubmit}>
