@@ -48,7 +48,7 @@
 
 .posts {
     width: 1000px;
-    height: 250px;
+    height: 300px;
     background-color: lightgray;
     border: 1px solid lightsteelblue;
     border-radius: 15px;
@@ -64,26 +64,27 @@
     justify-content: space-evenly;
     padding: 10px;
     height: 200px;
-    margin-top: 2%;
+    margin-top: 5%;
 }
 
-.posts button {
-    background-color: rgb(248, 47, 47);
-    color: white;
+.like {
+    background-color: white;
+    color: rgb(248, 47, 47);
+    border: 3px solid red;
     font-size: 18px;
     font-weight: 700;
     width: 100px;
     height: 40px;
     position: relative;
-    left: 880px;
+    left: 770px;
     top: -25px;
     border-radius: 10px;
 }
 
-.posts button:hover {
-    background-color: white;
-    color: red;
-    border: 3px solid red;
+.like:active {
+    background-color: rgb(248, 47, 47);
+    color: white;
+    
 }
 
 .image {
@@ -129,6 +130,46 @@
     color: red;
     border: 3px solid red;
 }
+
+.update {
+    background-color: green;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    width: 100px;
+    height: 40px;
+    position: relative;
+    left: 750px;
+    top: -25px;
+    border-radius: 10px;
+}
+
+.update:hover {
+    background-color: white;
+    color: green;
+    border: 3px solid green;
+}
+
+
+.delete{
+    background-color: rgb(248, 47, 47);
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    width: 100px;
+    height: 40px;
+    position: relative;
+    left: 830px;
+    top: -45px;
+    border-radius: 10px;
+}
+
+.delete:hover {
+    background-color: white;
+    color: red;
+    border: 3px solid red;
+}
+
 
 
 /* STYLING THE NEW POST PAGE  */

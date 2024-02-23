@@ -16,6 +16,16 @@ function PostPage() {
     }, []);
 
 
+    const handleDelete = (id) =>{
+        axios.delete('http://localhost:1926/post/'+id)
+        .then(res => {
+            alert('Post Deleted Succesfully')
+            console.log(res)
+            window.location.reload()
+        })
+        .catch(err => console.log('Error in deleting the post',err))
+    }
+
     return (
         <div className='postPage'>
             <header>
@@ -39,6 +49,9 @@ function PostPage() {
                         <div className='posts'>
                             <div className='main-container'>
                                 <div>
+                                    <button className='delete' onClick={(e) => handleDelete(data._id)}>Delete ⌫</button>
+                                </div>
+                                <div>
                                     <img src={data.carImage} alt="Image of the car" className='image' />
                                 </div>
                                 <div className='texts'>
@@ -49,7 +62,10 @@ function PostPage() {
                                 </div>
                             </div>
                             <div>
-                                <button>{data.likes} Likes ♡</button>
+                                <Link to={`/updatePost/${data._id}`}>
+                                    <button className='update'>📝 Update</button>
+                                </Link>
+                                <button className='like'>{data.likes} Likes ♡</button>
                             </div>
                         </div>
                     </div>
@@ -60,3 +76,10 @@ function PostPage() {
 }
 
 export default PostPage;
+
+
+// mCR100 Diesel Engine
+// Mahindra Quanto
+// oil leaks, A/C failure, gear box break down
+// Mahindra
+// https://stimg.cardekho.com/images/carexteriorimages/930x620/Mahindra/Mahindra-Quanto/2102/1544532691816/front-left-side-47.jpg

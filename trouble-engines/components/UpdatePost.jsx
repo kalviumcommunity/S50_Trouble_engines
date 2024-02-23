@@ -1,10 +1,12 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import axios from 'axios';
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import './CSS files/PostPage.css';
 
-function NewPost() {
+function UpdatePost() {
+    const {id} = useParams()
     const [formData, setFormData] = useState({
         carName: '',
         carImage: '',
@@ -21,33 +23,39 @@ function NewPost() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post("http://localhost:1926/post", formData)
+        axios.put("http://localhost:1926/post/"+id, formData)
             .then(res => {
                 console.log(res);
                 navigate('/post');
-                alert("New Post Created successfully")
             })
             .catch(err => {
                 console.log(err);
                 alert("Sorry, there was an error while submitting your post. Please try again later.");
             });
     };
-    
+
+    useEffect(() => {
+        axios.get('http://localhost:1926/post/'+id)
+            .then(res => setFormData(res.data))
+            .catch(err => {
+                console.error('Error fetching posts:', err);
+            });
+    }, []);
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} >
             <h1>Add New Post</h1>
             <div className='inputs'>
                 <label htmlFor="carName">Car Name</label>
-                <input type="text" name="carName" placeholder='Write the Car name' value={formData.carName} onChange={handleChange} />
+                <input type="text" name="carName" placeholder='Write the Car name' value={formData.carName}  onChange={handleChange} />
             </div>
             <div className='inputs'>
                 <label htmlFor="carImage">Car Image URL</label>
-                <input type="text" name="carImage" placeholder='Give the Image URL' value={formData.carImage} onChange={handleChange} />
+                <input type="text" name="carImage" placeholder='Give the Image URL' value={formData.carImage}  onChange={handleChange} />
             </div>
             <div className='inputs'>
                 <label htmlFor="company">Company</label>
-                <input type="text" name="company" placeholder='Write the Company name' value={formData.company} onChange={handleChange} />
+                <input type="text" name="company" placeholder='Write the Company name' value={formData.company}  onChange={handleChange} />
             </div>
             <div className='inputs'>
                 <label htmlFor="engineIssue">Engine Issue</label>
@@ -64,7 +72,11 @@ function NewPost() {
                 <button className='submit'>Submit</button>
             </div>
         </form>
-    );
+    )
 }
 
-export default NewPost;
+export default UpdatePost
+
+
+// 🗑️❌🗑⌫ | Copy & Paste
+// onChange={handleChange} 
