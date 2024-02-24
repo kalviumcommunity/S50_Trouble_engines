@@ -16,14 +16,14 @@ function PostPage() {
     }, []);
 
 
-    const handleDelete = (id) =>{
-        axios.delete('http://localhost:1926/post/'+id)
-        .then(res => {
-            alert('Post Deleted Succesfully')
-            console.log(res)
-            window.location.reload()
-        })
-        .catch(err => console.log('Error in deleting the post',err))
+    const handleDelete = (id) => {
+        axios.delete('http://localhost:1926/post/' + id)
+            .then(res => {
+                alert('Post Deleted Succesfully')
+                console.log(res)
+                window.location.reload()
+            })
+            .catch(err => console.log('Error in deleting the post', err))
     }
 
     return (
@@ -33,7 +33,9 @@ function PostPage() {
                     <h1>Trouble Engines</h1>
                 </Link>
                 <div className='buttns'>
-                    <button>Sign In</button>
+                    <Link to={'/signUp'}>
+                        <button>Sign In</button>
+                    </Link>
                     <button>Log In</button>
                     <button>Profile</button>
                 </div>

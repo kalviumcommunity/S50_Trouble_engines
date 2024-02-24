@@ -29,7 +29,7 @@ function NewPost() {
             })
             .catch(err => {
                 console.log(err);
-                alert("Sorry, there was an error while submitting your post. Please try again later.");
+                alert("Check whether all the fields are filled properly.");
             });
     };
     
