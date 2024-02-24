@@ -29,7 +29,7 @@ function NewPost() {
             })
             .catch(err => {
                 console.log(err);
-                alert("Check whether all the fields are filled properly.");
+                alert("Please make sure you have filled out all required fields correctly before submitting.");
             });
     };
     
