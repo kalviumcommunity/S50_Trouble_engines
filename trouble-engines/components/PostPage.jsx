@@ -36,8 +36,11 @@ function PostPage() {
                     <Link to={'/signUp'}>
                         <button>Sign In</button>
                     </Link>
+                    <Link to={'/userPage'}>
+                        <button>Users</button>
+                    </Link>
                     <button>Log In</button>
-                    <button>Profile</button>
+                    {/* <button>Profile</button> */}
                 </div>
             </header>
             <div>

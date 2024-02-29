@@ -6,6 +6,7 @@ import PostPage from '../components/PostPage.jsx'
 import NewPost from '../components/NewPost.jsx';
 import UpdatePost from '../components/UpdatePost.jsx';
 import SignUp from '../components/SignUp.jsx';
+import UserPage from '../components/UserPage.jsx';
 
 function App() {
   
@@ -18,6 +19,7 @@ function App() {
         <Route path='/createPost' element={<NewPost />} />
         <Route path='/updatePost/:id' element={<UpdatePost />} />
         <Route path='/signUp' element={<SignUp />} />
+        <Route path='/userPage' element={<UserPage />}  />
       </Routes>
     </Router>
 
