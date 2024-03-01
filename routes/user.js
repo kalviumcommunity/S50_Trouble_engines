@@ -32,7 +32,6 @@ router.post('/user', async (req, res) => {
     try {
         const data = await user.create(req.body);
         const token = generateToken(data);
-        console.log(token)
         res.status(200).json({ user: data, token: token });
     } catch (error) {
         res.status(400).json({ message: error.message });

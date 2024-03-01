@@ -60,7 +60,7 @@ function SignUp() {
                     console.log('User: ',user)
                     console.log('Token: ',token)
                     Cookies.set("userData", user);
-                    Cookies.set("Data Token", token)
+                    Cookies.set("dataToken", token); 
                     navigate('/post');
                     alert("Welcome to Trouble Engines. Go to our Home Page")
                 })
