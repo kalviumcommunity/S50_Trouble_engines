@@ -2,13 +2,9 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './CSS files/SignUp.css';
 import axios from 'axios';
-import Cookies from 'js-cookie';
 
-function SignUp() {
+function LogIn() {
     const [user, setUser] = useState({
-        userName: '',
-        name: '',
-        img: '',
         email: '',
         password: ''
     });
@@ -22,18 +18,6 @@ function SignUp() {
 
     const validateForm = () => {
         const errors = {};
-
-        if (!user.userName || user.userName === '') {
-            errors.userName = 'User Name is required';
-        }
-
-        if (!user.name || user.name === '') {
-            errors.name = 'Name is required';
-        }
-
-        if (!user.img || user.img === '') {
-            errors.img = 'Avatar URL is required';
-        }
 
         if (!user.email || user.email === '') {
             errors.email = 'Email is required';
@@ -56,13 +40,8 @@ function SignUp() {
             axios.post("http://localhost:1926/user", user)
                 .then(res => {
                     console.log(res.data);
-                    const { token , user } = res.data
-                    console.log('User: ',user)
-                    console.log('Token: ',token)
-                    Cookies.set("userData", user);
-                    Cookies.set("dataToken", token); 
-                    navigate('/post');
-                    alert("Welcome to Trouble Engines. Go to our Home Page")
+                    navigate('/userPage');
+                    alert("Welcome Back to Trouble Engines. Go to your Home Page")
                 })
                 .catch(err => {
                     console.error(err);
@@ -83,22 +62,7 @@ function SignUp() {
             </div>
             <div>
                 <form className='newUser' onSubmit={handleSubmit}>
-                    <div><h1>Create a New Account</h1></div>
-                    <div className='userInfo'>
-                        <label>User Name:</label>
-                        <input type="text" name="userName" onChange={handleChange} />
-                        {errors.userName && <span className="error">{errors.userName}</span>}
-                    </div>
-                    <div className='userInfo'>
-                        <label>Name:</label>
-                        <input type="text" name="name" onChange={handleChange} />
-                        {errors.name && <span className="error">{errors.name}</span>}
-                    </div>
-                    <div className='userInfo'>
-                        <label>Avatar URL:</label>
-                        <input type="text" name="img" onChange={handleChange} />
-                        {errors.img && <span className="error">{errors.img}</span>}
-                    </div>
+                    <div><h1>Hello Folk, Welcome Back to Trouble Engines</h1></div>
                     <div className='userInfo'>
                         <label>Email:</label>
                         <input type="text" name="email" onChange={handleChange} />
@@ -109,15 +73,8 @@ function SignUp() {
                         <input type="password" name="password" onChange={handleChange} />
                         {errors.password && <span className="error">{errors.password}</span>}
                     </div>
-                    <div className='login'>
-                        <p>Already a Car enthusiast?
-                            <Link to='/post'>
-                                <span>Log-In</span>
-                            </Link>
-                        </p>
-                    </div>
                     <div>
-                        <button className='signUpBtn'>Sign Up</button>
+                        <button>Log In</button>
                     </div>
                 </form>
             </div>
@@ -125,4 +82,4 @@ function SignUp() {
     );
 }
 
-export default SignUp;
+export default LogIn;
