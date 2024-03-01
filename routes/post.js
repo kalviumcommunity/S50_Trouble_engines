@@ -3,6 +3,7 @@ const { body, validationResult } = require('express-validator');
 const router = express.Router();
 const post = require("../models/postDB.js");
 
+
 // GET request
 router.get('/post', async (req, res) => {
     try {

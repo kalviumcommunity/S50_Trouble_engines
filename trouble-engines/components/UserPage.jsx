@@ -8,8 +8,7 @@ import Cookies from 'js-cookie';
 function UserPage() {
 
     const [users, setUsers] = useState([]);
-    const cookValue= Cookies.get("userData")
-
+    const [cookValue, setCookValue] = useState({});
 
 
     useEffect(() => {
@@ -19,6 +18,11 @@ function UserPage() {
                 console.log('Error fetching users: ', err)
             })
     })
+
+    useEffect(() => {
+        const userDataCookie = Cookies.get("userData");
+        setCookValue(userDataCookie);
+    }, []);
 
     return (
         <div className='userPage'>
@@ -51,6 +55,10 @@ function UserPage() {
                         </div>
                     </div>
                 ))}
+                {/* <div> */}
+                    {/* <p>hi there these r the Cookies</p> */}
+                    {/* <h1>{cookValue.name}</h1> */}
+                {/* </div> */}
             </div>
         </div>
     )

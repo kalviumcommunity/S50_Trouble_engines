@@ -4,7 +4,7 @@ const cors = require('cors')
 require("dotenv").config()
 const connectDB = require("./config/dbConnect.js")
 const port = process.env.PORT;
-const userRouter = require("./routes/home.js")
+const userRouter = require("./routes/user.js")
 const postRouter = require("./routes/post.js")
 
 
