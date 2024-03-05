@@ -5,7 +5,8 @@ import axios from 'axios';
 
 function PostPage() {
     const [posts, setPosts] = useState([]);
-
+    const [filter, setFilter] = useState('all');
+    const [sortedPosts, setSortedPosts] = useState(posts);
 
     useEffect(() => {
         axios.get('http://localhost:1926/post')
@@ -25,6 +26,23 @@ function PostPage() {
             })
             .catch(err => console.log('Error in deleting the post', err))
     }
+
+    const handleFilterChange = (event) => {
+        setFilter(event.target.value);
+    };
+
+
+    useEffect(() => {
+        const filterPosts = () => {
+            if (filter === 'all') {
+                setSortedPosts(posts);
+            } else {
+                setSortedPosts(posts.filter(post => post.userName === filter));
+            }
+        };
+
+        filterPosts();
+    }, [filter, posts]);
 
     return (
         <div className='postPage'>
@@ -50,8 +68,29 @@ function PostPage() {
                     <button className='new-post'>New Post</button>
                 </Link>
             </div>
+            <div className='flex'>
+                <div>
+                    <h1>
+                        Filter by Users:-
+                    </h1>
+                </div>
+                <div className='dropdown'>
+                    <select name="mostLiked" onChange={handleFilterChange}>
+                        <option value="all">All</option>
+                        <option value="Sammy26">Samarth</option>
+                        <option value="Mustu1221">Musthafa</option>
+                        <option value="Sarah123">Sarah</option>
+                        <option value="Michael456">Michael</option>
+                        <option value="Jessica_85">Emily</option>
+                        <option value="Matt86">Matthew</option>
+                        <option value="Rachel00">Rachel</option>
+                        <option value="Chris22">Chris</option>
+                    </select>
+                </div>
+            </div>
+
             <div className='fullPost'>
-                {posts && posts.map((data, index) => (
+                {sortedPosts && sortedPosts.map((data, index) => (
                     <div key={index}>
                         <div className='posts'>
                             <div className='main-container'>
@@ -84,9 +123,3 @@ function PostPage() {
 
 export default PostPage;
 
-
-// mCR100 Diesel Engine
-// Mahindra Quanto
-// oil leaks, A/C failure, gear box break down
-// Mahindra
-// https://stimg.cardekho.com/images/carexteriorimages/930x620/Mahindra/Mahindra-Quanto/2102/1544532691816/front-left-side-47.jpg
