@@ -249,9 +249,9 @@ form input {
 
 .flex{
     position: absolute;
-    left: 58% ;
+    left: 53% ;
     top:12.5%;
-    width: 222px;
+    width: 310px;
     display: flex;
     justify-content: space-between;
     align-items: center;

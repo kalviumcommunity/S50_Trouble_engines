@@ -7,6 +7,7 @@ function PostPage() {
     const [posts, setPosts] = useState([]);
     const [filter, setFilter] = useState('all');
     const [sortedPosts, setSortedPosts] = useState(posts);
+    const [users, setUsers] = useState([]);
 
     useEffect(() => {
         axios.get('http://localhost:1926/post')
@@ -16,16 +17,22 @@ function PostPage() {
             });
     }, []);
 
+    useEffect(() => {
+        axios.get('http://localhost:1926/user')
+            .then(res => setUsers(res.data))
+            .catch(err => console.error('Error fetching users:', err));
+    }, []);
+
 
     const handleDelete = (id) => {
-        axios.delete('http://localhost:1926/post/' + id)
-            .then(res => {
-                alert('Post Deleted Succesfully')
-                console.log(res)
-                window.location.reload()
+        axios.delete(`http://localhost:1926/post/${id}`)
+            .then(() => {
+                alert('Post Deleted Successfully');
+                setPosts(prev => prev.filter(post => post._id !== id));
             })
-            .catch(err => console.log('Error in deleting the post', err))
-    }
+            .catch(err => console.error('Error in deleting the post', err));
+    };
+
 
     const handleFilterChange = (event) => {
         setFilter(event.target.value);
@@ -41,11 +48,15 @@ function PostPage() {
             }
         };
 
+
         filterPosts();
     }, [filter, posts]);
 
     return (
         <div className='postPage'>
+
+            {/* HEADER  */}
+
             <header>
                 <Link to={'/'}>
                     <h1>Trouble Engines</h1>
@@ -60,7 +71,6 @@ function PostPage() {
                     <Link to={'/logIn'}>
                         <button>Log In</button>
                     </Link>
-                    {/* <button>Profile</button> */}
                 </div>
             </header>
             <div>
@@ -68,6 +78,9 @@ function PostPage() {
                     <button className='new-post'>New Post</button>
                 </Link>
             </div>
+
+            {/* DROP-DOWN  */}
+
             <div className='flex'>
                 <div>
                     <h1>
@@ -77,17 +90,14 @@ function PostPage() {
                 <div className='dropdown'>
                     <select name="mostLiked" onChange={handleFilterChange}>
                         <option value="all">All</option>
-                        <option value="Sammy26">Samarth</option>
-                        <option value="Mustu1221">Musthafa</option>
-                        <option value="Sarah123">Sarah</option>
-                        <option value="Michael456">Michael</option>
-                        <option value="Jessica_85">Emily</option>
-                        <option value="Matt86">Matthew</option>
-                        <option value="Rachel00">Rachel</option>
-                        <option value="Chris22">Chris</option>
+                        {users.map((user) => (
+                            <option key={user._id} value={user.userName}>{user.name}</option>
+                        ))}
                     </select>
                 </div>
             </div>
+
+            {/* POSTS  */}
 
             <div className='fullPost'>
                 {sortedPosts && sortedPosts.map((data, index) => (
