@@ -238,3 +238,23 @@ form input {
     color: red;
     font-weight: 700;
 }
+
+
+/* STYLING THE DROPDOWN BOX */
+
+.dropdown{
+    border: 3px solid blue;
+    width: fit-content;
+}
+
+.flex{
+    position: absolute;
+    left: 53% ;
+    top:12.5%;
+    width: 310px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    color: blue;
+}
