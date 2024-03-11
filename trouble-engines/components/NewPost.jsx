@@ -21,7 +21,7 @@ function NewPost() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post("http://localhost:1926/post", formData)
+        axios.post("https://trounle-engines.onrender.com/post", formData)
             .then(res => {
                 console.log(res);
                 navigate('/post');

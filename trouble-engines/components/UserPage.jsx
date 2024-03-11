@@ -12,7 +12,7 @@ function UserPage() {
 
 
     useEffect(() => {
-        axios.get('http://localhost:1926/user')
+        axios.get('https://trounle-engines.onrender.com/user')
             .then(res => setUsers(res.data))
             .catch(err => {
                 console.log('Error fetching users: ', err)

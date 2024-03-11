@@ -53,7 +53,7 @@
     border: 1px solid lightsteelblue;
     border-radius: 15px;
     margin-top: 5%;
-    margin-left: 22%;
+    margin-left: 15%;
     margin-bottom: 2%;
 }
 
@@ -90,7 +90,7 @@
 .image {
     width: 280px;
     border-radius: 10px;
-    margin-left: 10%;
+    margin-left: 5%;
     position: absolute;
     left: 20%;
     cursor: pointer;
@@ -105,7 +105,7 @@
     width: 450px;
     /* border: 1px solid red; */
     font-size: larger;
-    margin-left: 30%;
+    margin-left: 25%;
 }
 
 .texts span {
@@ -120,7 +120,7 @@
     width: 100px;
     height: 40px;
     position: absolute;
-    left: 1245px;
+    left: 1200px;
     top: 12%;
     border-radius: 10px;
 }
