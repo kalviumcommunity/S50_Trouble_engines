@@ -10,7 +10,7 @@ function PostPage() {
     const [users, setUsers] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:1926/post')
+        axios.get('https://trounle-engines.onrender.com/post')
             .then(res => setPosts(res.data))
             .catch(err => {
                 console.error('Error fetching posts:', err);
@@ -18,14 +18,14 @@ function PostPage() {
     }, []);
 
     useEffect(() => {
-        axios.get('http://localhost:1926/user')
+        axios.get('https://trounle-engines.onrender.com/user')
             .then(res => setUsers(res.data))
             .catch(err => console.error('Error fetching users:', err));
     }, []);
 
 
     const handleDelete = (id) => {
-        axios.delete(`http://localhost:1926/post/${id}`)
+        axios.delete(`https://trounle-engines.onrender.com/post/${id}`)
             .then(() => {
                 alert('Post Deleted Successfully');
                 setPosts(prev => prev.filter(post => post._id !== id));

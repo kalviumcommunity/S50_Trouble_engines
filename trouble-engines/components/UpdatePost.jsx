@@ -23,7 +23,7 @@ function UpdatePost() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.put("http://localhost:1926/post/" + id, formData)
+        axios.put("https://trounle-engines.onrender.com/post/" + id, formData)
             .then(res => {
                 console.log(res);
                 navigate('/post');
@@ -34,7 +34,7 @@ function UpdatePost() {
     };
 
     useEffect(() => {
-        axios.get('http://localhost:1926/post/' + id)
+        axios.get('https://trounle-engines.onrender.com/post/' + id)
             .then(res => setFormData(res.data))
             .catch(err => {
                 console.error('Error fetching posts:', err);

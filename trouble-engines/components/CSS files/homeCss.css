@@ -10,7 +10,7 @@
 }
 
 .container {
-    background-image: url('../src/assets/back.png');
+    background-image: url('../assest/back.png');
     background-color: black;
     background-size: cover;
     background-position: center;
